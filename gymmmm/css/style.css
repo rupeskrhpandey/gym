@@ -1,0 +1,255 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700;900&display=swap');
+
+
+/* font-family: 'Roboto Slab', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+body{
+    background-color: rgb(230,230,230);
+
+}
+.nav_top{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content:space-around ;
+    padding: 10px 0;
+    font-size: 11px;
+}
+.nav_top a{
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    transition: .5s ease-in-out;
+    
+
+}
+.nav_top a:hover{
+    opacity: .7;
+}
+.nav_top small{
+    color: orangered;
+    font-size: 12px ;
+}
+nav{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-around;
+    flex-direction: row ;
+}
+nav .logo img{
+    width: 70px;
+    height: 70px;
+}
+nav .right-nav-items{
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+}
+nav .right-nav-items a{
+    text-decoration: none;
+    color: black;
+    transition: .5s ease-in-out ;
+}
+nav .right-nav-items a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+.body_top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../images/p011.jpg");
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    padding-left: 100px;
+    
+}
+.body_top h1{
+    font-size: 70px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+}
+.body_top b{
+    margin-left: 10px;
+    color: orangered;
+
+}
+.body_top h3{
+    color: orangered;
+    margin-left: 10px;
+    font-size: 30px;
+
+}
+.body_top p{
+    width: 700px;
+    margin-top: 20px;
+    font-weight: 300;
+
+}
+.card-body{
+    background-color: white;
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -100px;
+    box-shadow: 2px 10px 5px 5px rgba(0,0,0,.3);
+}
+.card-body .section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.card-body .section img{
+    width: 80px;
+    padding: 30px;
+}
+.card-body .section .right{
+    
+    padding: 20px;
+    margin: 30px 0;
+
+
+}
+.card-body .section .right h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.card-body .section .right a{
+    text-decoration: none;
+    color: orangered;
+}
+
+
+.main-body-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    padding-left: 10vw;
+    margin: 50px 0;
+    
+    background-color: white;
+    box-shadow: 2px 10px 5px 5px rgba(0,0,0,.3);
+    
+
+
+}
+.main-body-1 .left{
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.main-body-1 .left img{
+    margin: 30px ;
+}
+.main-body-1 .left h2{
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+}
+.main-body-1 .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: space-around;
+    padding: 30px;
+}
+.main-body-1 .right h1{
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+.main-body-1 .right p{
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 300;
+
+}
+.end-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 2px 10px 5px 
+}
+.end-nav .block-grp{
+    width: 80vw;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px;
+    
+
+}
+.end-nav .block-grp .block{
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.end-nav p{
+    background-color: black;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    color: white;
+    padding: 50px;
+}
+.end-nav p a{
+    color: gray;
+    margin-left: 5px;
+}
+.end-nav .block a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: .5s ease-in-out;
+}
+.end-nav .block a hover{
+
+    opacity: .6;
+}
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-button button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    outline: none;
+}
+
+.floating-button button:hover {
+    background-color: #ff6347;
+}

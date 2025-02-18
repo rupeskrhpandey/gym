@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs and Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .signup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background-color: orange;" class="card" id="strength-training">
+            <h2>Strength Training</h2>
+            <img style="height: 300px;width: 300px;" src="images\sam-moghadam-khamseh-Z4Q9KHw9ofE-unsplash.jpg" alt="Strength Training">
+        </div>
+        <div style="background-color: orange;"class="card" id="muscle-building">
+            <h2>Muscle Building</h2>
+            <img style="height: 300px;width: 300px;" src="images/muscle building.jpg" alt="Muscle Building">
+        </div>
+        <div style="background-color: orange;"class="card" id="cardio">
+            <h2>Cardio</h2>
+            <img style="height: 300px;width: 300px;"src="images/cardio.jpg" alt="Cardio">
+        </div>
+        <div style="background-color: orange;"class="card" id="yoga">
+            <h2>Yoga</h2>
+            <img style="height: 300px;width: 300px;" src="images/yoga.jpg" alt="Yoga">
+        </div>
+    </div>
+
+    <div class="signup-form" id="signup-form">
+        <span class="close-btn" onclick="closeForm()">×</span>
+        <h2>Sign Up Form</h2>
+        <!-- Your sign up form content goes here -->
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // Function to open sign up form
+        function openForm() {
+            document.getElementById("signup-form").style.display = "block";
+        }
+
+        // Function to close sign up form
+        function closeForm() {
+            document.getElementById("signup-form").style.display = "none";
+        }
+
+        // Add event listeners to each program card
+        document.getElementById("strength-training").addEventListener("click", openForm);
+        document.getElementById("muscle-building").addEventListener("click", openForm);
+        document.getElementById("cardio").addEventListener("click", openForm);
+        document.getElementById("yoga").addEventListener("click", openForm);
+    </script>
+</body>
+</html>

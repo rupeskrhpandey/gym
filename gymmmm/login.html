@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2>Login to Your Fitness Account</h2>
+    <div class="input-group">
+      <input type="text" id="username" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password">
+    </div>
+    <button class="btn" onclick="login()">Login</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Check if username and password are valid (you can implement your own validation logic)
+      if (username === "user" && password === "password") {
+        // Calculate BMI
+        var weight = prompt("Enter your weight in kilograms:");
+        var height = prompt("Enter your height in meters:");
+        var bmi = calculateBMI(weight, height);
+        var result = "Your BMI is: " + bmi.toFixed(2);
+        document.getElementById("result").innerHTML = result;
+
+        // Redirect to workouts and diet plans page (replace the URL with your actual page URL)
+        window.location.href = "workouts_and_diet_plans.html";
+      } else {
+        document.getElementById("result").innerHTML = "Invalid username or password. Please try again.";
+      }
+    }
+
+    function calculateBMI(weight, height) {
+      return weight / (height * height);
+    }
+  </script>
+
+</body>
+
+</html>
